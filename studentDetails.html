@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details</title>
+    <script
+      src="https://kit.fontawesome.com/e2a5af85b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="navbar-brand">
+          <img src="assets/images/Group 44.png" alt="Skilledity" />
+        </div>
+        <button class="login-btn">Login</button>
+      </div>
+    </nav>
+    <div class="studentDetails-container">
+      <div class="studentDetails-title">
+        <h1>Student <span>Details!</span></h1>
+        <p>Select the class & section to check student details</p>
+      </div>
+      <div class="studentDetails-form-group">
+        <div class="studentDetails-form-control">
+          <label for="class">Class</label>
+          <select id="studentDetails-class">
+            <option value="">Select Class</option>
+            <option value="6">6th Class</option>
+            <option value="7">7th Class</option>
+            <option value="8">8th Class</option>
+            <option value="9">9th Class</option>
+            <option value="10">10th Class</option>
+          </select>
+        </div>
+        <div class="studentDetails-form-control">
+          <label for="section">Section</label>
+          <input type="text" id="studentDetails-section" placeholder="Enter the section" />
+        </div>
+      </div>
+      <button class="studentDetails-proceed-btn">Proceed</button>
+    </div>
+  </body>
+</html>
+
+<!-- ----------------------------- -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const classSelect = document.getElementById("studentDetails-class");
+        const sectionInput = document.getElementById("studentDetails-section");
+        const proceedBtn = document.querySelector(".studentDetails-proceed-btn");
+
+        classSelect.addEventListener("change", function () {
+          if (this.value && sectionInput.value) {
+            proceedBtn.style.opacity = "1";
+            proceedBtn.disabled = false;
+          } else {
+            proceedBtn.style.opacity = "0.5";
+            proceedBtn.disabled = true;
+          }
+        });
+
+        sectionInput.addEventListener("input", function () {
+          if (this.value && classSelect.value) {
+            proceedBtn.style.opacity = "1";
+            proceedBtn.disabled = false;
+          } else {
+            proceedBtn.style.opacity = "0.5";
+            proceedBtn.disabled = true;
+          }
+        });
+
+        proceedBtn.style.opacity = "0.5";
+        proceedBtn.disabled = true;
+      });
+    </script>
+  
+</html>

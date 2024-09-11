@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color : #55679C;
+  --btn-color : #04081B;
+  --primary-text-color : #000000;
+  --secondary-text-color : #707070;
+  --white-color : #ffffff;
+  --box-shadow : rgba(0, 0, 0, 0.1);
+  --card-color : #195AAF05
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--white-color);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.box-animation{
+  border : 0px solid transparent;
+  transition: 0.5s linear;
+}
+
+.box-animation:hover{
+  border: 2px solid var(--primary-color);
+}
+
+/* ------------------------------- NAV BAR -------------------------------- */
+
+.navbar {
+  z-index:100;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#55679C0D;
+  border-bottom: 2px solid #DEE5F8
+}
+
+.nav-content{
+  width: 65%;
+  height: 62.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .navbar-brand {
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 34.13px;
+  text-align: left;
+} */
+
+.navbar-brand img {
+  height: 35px;
+  width: auto;
+  align-items: center;
+}
+
+.login-btn {
+  width: 150px;
+  height: 40px;
+  padding: 8px 52px 8px 52px;
+  background-color: var(--btn-color);
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #04081be2;
+}
+
+/* ------------------- LINEAR GRADIENT ----------------------- */
+
+.linear-gradient{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 59.63%, rgba(194, 208, 248, 0.5) 100%);
+
+}
+
+/* ------------------------ WELCOME CONTAINER -------------------- */
+.welcome-container{
+  margin-top: 80px;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-title{
+  width: 966px;
+  height: 110px;
+  gap: 8px;
+  opacity: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-title .title{
+  font-family: "Montserrat";
+  font-size: 45px;
+  font-weight: 600;
+}
+
+/*--------- Card Container ----------*/
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--card-color);
+  padding: 50px;
+  border-radius: 10px;
+  width: 400px;
+  height: auto;
+  text-align: center;
+  box-shadow: 0px 1px 4.5px 0px #0000001A;
+  margin: 20px; 
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h1 span {
+  color: var(--primary-color);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 40px;
+}
+
+
+/* =========================================== SCHOOL LOGIN ============================================ */
+
+.school-login-content{
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.school-login-container{
+  background-color: rgba(255,255,255,0.5);
+  width : 70%;
+  height: 80%;
+  margin-top : 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.school-login-popup{
+  width: 50%;
+  height: 100%;
+  background-color: hsla(214, 75%, 39%, 0.02);
+  padding: 90px 120px 80px 120px;
+  gap: 66px;
+  border-radius: 14.4px;
+  border: 4.8px 0px 0px 0px;
+  border-top: 4.8px solid #55679C;
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
+.school-login-credentials{
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  margin-top: -20px;
+}
+
+.school-login-credentials h1{
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.school-login-credentials h3{
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.school-login-credentials p{
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.school-input-box{
+  width : 100%;
+  height: auto;
+  margin : 10px 0;
+  position: relative;
+}
+
+.school-input-box input{
+  width: 100%;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--color-dark);
+  padding: 20px 45px 20px 20px;
+  border: 1.8px solid #DEE5F8;
+  box-shadow: 0px 2px 4px 0px #00000040;
+  margin: 10px 0;
+  padding-right: 35px; 
+}
+
+.school-input-box i{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 20px;
+  font-size: 10px;
+  cursor: pointer;
+  color: var(--secondary-text-color);
+}
+
+.school-input-box label{
+  font-weight: 600;
+}
+
+.school-input-box input::placeholder{
+  color: var(--secondary-text-color);
+  font-size: 0.8rem;
+}
+
+
+.school-login-popup .school-rememberMe-forgotPw{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.school-rememberMe-forgotPw a{
+  color: var(--secondary-text-color);
+}
+
+.school-rememberMe-forgotPw input{
+  cursor: pointer;
+}
+
+.school-rememberMe-forgotPw a:hover{
+  color: var(--primary-text-color);
+}
+
+.school-login-btn{
+  margin-top: 20px;
+  width: 100%;
+  height: 45px;
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  border-radius: 4px;
+}
+
+.welcome-image img{
+  width: 60%;
+  height: 60%;
+}
+
+/* ================================ SCHOOL DASHBOARD ================================ */
+
+.school-dashboard-container{
+  width: 100vw;
+  height: 90vh;
+}
+
+.school-dashboard-content{
+  margin-top: 100px;
+  margin-left: 150px;
+  width: 55vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+} 
+
+.school-dashboard-title{
+  width: fit-content;
+  height: fit-content;
+}
+
+.school-dashboard-container h1 {
+  font-family: "Montserrat";
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.school-dashboard-container h1 span {
+  color: #55679c;
+}
+
+.school-dashboard-container .school-name {
+  margin-top: -30px ;
+  color:  #707070;
+  font-size: 1.4rem;
+  font-family: "Montserrat";
+  font-weight: 500;
+  text-align: left;
+}
+
+.school-dashboard-container .dashboard-box{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.school-dashboard-container .section {
+  flex-basis: 48%;
+  background-color: #195AAF05;
+  width : 300px;
+  height: 170px;
+  margin: 10px 0;
+  box-shadow: 0px 1px 4.5px 0px #0000001A;
+  padding: 40px 30px;
+  border-radius: 8px;
+}
+
+.school-dashboard-container .section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.school-dashboard-container .section p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.school-dashboard-container .btn {
+  width: 120px;
+  height: 35px;
+  padding: 8px 52px 8px 52px;
+  background-color: #04081B;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: 0.3s ease;
+}
+
+.school-dashboard-container .btn-secondary {
+  width: 120px;
+  height: 35px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  background-color: white;
+  color: #04081B;
+  border: 1px solid #DEE5F8;
+  border-radius : 8px;
+  margin-right: 40px;
+  transition: 1s ease;
+}
+
+.school-dashboard-container .btn:hover{
+  background-color: #04081be2;
+}
+
+.school-dashboard-container .btn-secondary:hover{
+  border: 1px solid var(--primary-color);
+}
+
+/* ------------ SCHOOL DETAILS ------------------- */
+
+.studentDetails-container{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.studentDetails-form-group {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+/* .studentDetails-form-control {
+  width: 45%;
+}
+.studentDetails-form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.studentDetails-form-group select,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.studentDetails-proceed-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #5470b0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+
+/* Base styling for the form control */
+.studentDetails-form-control {
+  max-width: 300px; /* Set the width of the dropdown */
+  margin: 20px; /* Add some margin for spacing */
+  font-family: Arial, sans-serif; /* Use a simple and clean font */
+}
+
+/* Styling the label */
+.studentDetails-form-control label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Styling the select element */
+.studentDetails-form-control select {
+  width: 100%;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 8px; /* Rounded corners for the input */
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  appearance: none; /* Remove default system dropdown styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>'); /* Custom dropdown arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px 20px;
+}
+
+/* Focus state for select to increase accessibility */
+.studentDetails-form-control select:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+/* Option styling for consistent cross-browser appearance */
+.studentDetails-form-control select option {
+  padding: 8px; /* Comfortable padding inside options */
+  background: white; /* Ensuring the background is white */
+  color: black; /* Text color for options */
+}
+
+
+/* ------------------- MEDIA QUERIES --------------------- */
+
+@media screen and (max-width : 991px) {
+  .card-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card {
+    width: 450px;
+    height: auto;
+  }
+  
+  .card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  .school-login-container{
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .school-login-popup{
+    width: 100%;
+    padding: 100px 50px;
+  }
+
+  .welcome-image img{
+    margin: 30px;
+    width: 80%;
+    height: auto;
+  }
+  
+  .school-dashboard-container .dashboard-box{
+    flex-direction: column;
+  }
+
+  .school-dashboard-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .school-dashboard-content{
+    margin : 0;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .school-dashboard-container .section {
+    width : 400px;
+    height: 270px;
+    margin: 40px 0;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .navbar{
+    width: 768px;
+  }
+
+  .nav-content{
+    width: 90%;
+  }
+
+  .welcome-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .welcome-title{
+    width: 70%;
+    height: 110px;
+    gap: 8px;
+    opacity: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .welcome-title .title{
+    font-size: 1.6rem;
+  }
+  
+  .card {
+    width: 400px;
+    height: auto;
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+
+  .welcome-image{
+    display: none;
+  }
+  
+}
+@media screen and (max-width : 579px) {
+  .navbar{
+    width: 100vw;
+  }
+  
+  .nav-content{
+    width: 90%;
+  }
+
+  .welcome-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .welcome-title{
+    width: 70%;
+    height: 110px;
+    gap: 8px;
+    opacity: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .welcome-title .title{
+    font-size: 1.6rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  /* SCHOOL LOGIN */
+
+  .school-login-container{
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .school-login-popup{
+    width: 100%;
+    padding: 100px 50px;
+  }
+
+  .welcome-image img{
+    margin: 30px;
+    width: 80%;
+    height: auto;
+  }
+
+  /* SCHOOL DASHBOARD */
+
+  .school-dashboard-title{
+    margin-top: 220px;
+  }
+
+  .school-dashboard-container .section {
+    width : 300px;
+    height: 270px;
+    margin-bottom: 16px;
+  }
+
+  .school-dashboard-container .btn-secondary{
+    margin-bottom: 10px;
+  }
+
+}
