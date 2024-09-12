@@ -25,58 +25,50 @@
         <p>Select the class & section to check student details</p>
       </div>
       <div class="studentDetails-form-group">
-        <div class="studentDetails-form-control">
-          <label for="class">Class</label>
-          <select id="studentDetails-class">
-            <option value="">Select Class</option>
-            <option value="6">6th Class</option>
-            <option value="7">7th Class</option>
-            <option value="8">8th Class</option>
-            <option value="9">9th Class</option>
-            <option value="10">10th Class</option>
-          </select>
+        <div class="studentDetails-form-control" id="class-input">
+          <div class="select-menu">
+            <label for="class">Class</label>
+            <div class="select-btn">
+              <span class="sBtn-text">Select your option</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option">
+                <span class="option-text">6<sup>th</sup> Class</span>
+              </li>
+              <li class="option">
+                <span class="option-text">7<sup>th</sup> Class</span>
+              </li>
+              <li class="option">
+                <span class="option-text">8<sup>th</sup> Class</span>
+              </li>
+              <li class="option">
+                <span class="option-text">9<sup>th</sup> Class</span>
+              </li>
+              <li class="option">
+                <span class="option-text">10<sup>th</sup> Class</span>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="studentDetails-form-control">
-          <label for="section">Section</label>
-          <input type="text" id="studentDetails-section" placeholder="Enter the section" />
+          <div class="section-select">
+            <label for="section">Section</label>
+            <input
+            type="text"
+            id="studentDetails-section"
+            placeholder="Enter the section"
+            />
+          </div>
         </div>
       </div>
-      <button class="studentDetails-proceed-btn">Proceed</button>
+      <div class="proceed-btn-container">
+        <button class="studentDetails-proceed-btn">
+          <span class="text">Proceed</span>
+          <span class="icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
-</html>
-
-<!-- ----------------------------- -->
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const classSelect = document.getElementById("studentDetails-class");
-        const sectionInput = document.getElementById("studentDetails-section");
-        const proceedBtn = document.querySelector(".studentDetails-proceed-btn");
-
-        classSelect.addEventListener("change", function () {
-          if (this.value && sectionInput.value) {
-            proceedBtn.style.opacity = "1";
-            proceedBtn.disabled = false;
-          } else {
-            proceedBtn.style.opacity = "0.5";
-            proceedBtn.disabled = true;
-          }
-        });
-
-        sectionInput.addEventListener("input", function () {
-          if (this.value && classSelect.value) {
-            proceedBtn.style.opacity = "1";
-            proceedBtn.disabled = false;
-          } else {
-            proceedBtn.style.opacity = "0.5";
-            proceedBtn.disabled = true;
-          }
-        });
-
-        proceedBtn.style.opacity = "0.5";
-        proceedBtn.disabled = true;
-      });
-    </script>
-  
 </html>
